@@ -1,0 +1,52 @@
+<p>The ngSwitch is an Angular structural directive, which allows us to add or remove DOM elements.
+     It works in conjunction with ngSwitchcase, & ngSwitchDefault directives.
+      It is similar to the switch statement of JavaScript. In this tutorial, we will look at the syntax of ngSwitch, 
+      ngSwitchcase & ngSwitchDefault. We will show you how to use these directives using an example. 
+    The examples include ngSwitch Example, multiple ngSwitchCase , Loose Equality Checks, etc.</p>
+
+    <div class="card">
+        <div class="card-header">
+            ngSwitch Header
+
+        </div>
+        <div  class="card-body">
+           inputstring  <input type="text" [(ngModel)]="number">
+           <div [ngSwitch]="number">
+            <div *ngSwitchCase="1">one</div>
+            <div *ngSwitchCase="2">two</div>
+            <div *ngSwitchCase="3">three</div>
+            <div *ngSwitchCase="4">four</div>
+            <div *ngSwitchCase="5">five</div>
+            <div *ngSwitchDefault> this is deafult</div>
+           </div>
+
+        </div>
+    </div> <br/>
+
+
+    <div class='card'>
+        <div class='card-header'>
+          Multiple ngSwitchCase with same condition
+        </div>
+       
+        <div class="card-body">
+          <select [(ngModel)]="selectedValue2">
+            <option *ngFor="let item of items;" [value]="item.name">{{item.name}}</option>
+          </select>
+       
+          <div [ngSwitch]="selectedValue1">
+            <p *ngSwitchCase="'One'">One is Selected</p>
+            <p *ngSwitchCase="'Two'">Two is Selected</p>
+            <p *ngSwitchCase="'Two'">Two Again used in another element</p>
+            <p *ngSwitchDefault>This is Default</p>
+          </div>
+
+
+          <div [ngSwitch]="selectedValue2">
+            <ng-template [ngSwitchCase]="'One'">One is Selected</ng-template>
+            <ng-template [ngSwitchCase]="'Two'">Two is Selected</ng-template>
+            <ng-template ngSwitchDefault>This is Default</ng-template>
+          </div>
+        </div>
+       
+      </div>

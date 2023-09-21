@@ -1,0 +1,107 @@
+<p>
+    Angular ngFor directive iterates over a collection of data like an array, list,
+     etc, and creates an HTML element for each of the items from an HTML template
+     . It helps us to build lists or tables to display tabular data in a nice way. 
+     In this tutorial, we will look at the syntax and how to use ngFor to display a list of movies
+      using example code. The ngFor also exports several local variables 
+    like Index, First, Last, odd, even & trackby.etc. In this article, we will learn the following
+</p>
+
+<div class='panel panel-primary'>
+    <div class='panel-heading'>
+        {{title}}
+    </div>
+ 
+    <div class='panel-body'>
+        <div class='table-responsive'>
+            <table class='table'>
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Director</th>
+                        <th>Cast</th>
+                        <th>Release Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+ 
+<tr *ngFor="let movie of movies; let i=index;">
+    <td> {{i}} </td>
+    <td>{{movie.title}}</td>
+    <td>{{movie.director}}</td>
+    <td>{{movie.cast}}</td>
+    <td>{{movie.releaseDate}}</td>
+</tr>
+ 
+                    <tr *ngFor="let movie of movies;">
+                        <td>{{movie.title}}</td>
+                        <td>{{movie.director}}</td>
+                        <td>{{movie.cast}}</td>
+                        <td>{{movie.releaseDate}}</td>
+                    </tr>
+
+                    <tr *ngFor="let movie of movies; let i=index; let o= odd; let e=even;"
+[ngClass]="{ odd: o, even: e }">
+    <td> {{i}} </td>
+    <td>{{movie.title}}</td>
+    <td>{{movie.director}}</td>
+    <td>{{movie.cast}}</td>
+    <td>{{movie.releaseDate}}</td>
+</tr>
+
+<tr *ngFor="let movie of movies; let i=index; let first= first; let last=last;" [ngClass]="{ first: first, last: last }">
+    <td> {{i}} </td>
+    <td>{{movie.title}}</td>
+    <td>{{movie.director}}</td>
+    <td>{{movie.cast}}</td>
+    <td>{{movie.releaseDate}}</td>
+  </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<br/>
+<div class='card'>
+    <div class='card-header'>
+      <p>Nested Array</p>
+    </div>
+   
+    <div class='table-responsive'>
+      <table class='table table-bordered table-sm '>
+        <thead class="thead-dark">
+          <tr>
+            <th>Name</th>
+            <th>Mail ID</th>
+            <th>Skills</th>
+          </tr>
+        </thead>
+        <tbody>
+
+            
+ 
+<tr *ngFor="let movie of employees; trackBy:trackByFn;">
+    <td>{{movie.name}}</td>
+            <td>{{movie.email}}</td>
+</tr>
+          <tr *ngFor="let employee of employees;">
+            <td>{{employee.name}}</td>
+            <td>{{employee.email}}</td>
+            <td>
+              <table class='table table-sm '>
+                <tbody>
+                  <tr *ngFor="let skill of employee.skills;">
+                    <td>{{skill.skill}}</td>
+                    <td>{{skill.exp}}</td>
+                  </tr>
+                </tbody>
+              </table>
+   
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+ 

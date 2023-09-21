@@ -1,0 +1,81 @@
+
+<p> Interpolation</p>
+{{firstname}} {{lastname}}
+
+<div class="row">
+    <div class="mb-4">
+        <!-- propery buinding -->
+       <h1 [innerText]="TitleName"></h1>
+
+         <button [disabled]="TextName">Well Done In Project</button>
+         
+         <img [src]="images">
+         <img bind-src="images">
+         <p [style.color]="color">This is red</p>
+    </div>
+
+    <div class="mb-4">
+        <!-- //event buinding 
+        In this guide, we will explore the Event Binding in Angular. Event binding is one way from view to component. We use it to perform an action in
+         the component when the user performs an action like clicking on a button, changing the input, etc in the view.
+        -->
+        <button (click)="save()">Save</button>
+        <input type="text" name="value" [(ngModel)]="TitleName" (input)="getinput($event)">
+        <button (click)="getclick()">count</button>
+        {{countclick}}
+
+  
+
+    </div>
+
+
+
+
+</div><br/>
+
+
+<div class="row">
+    <p>ENTER the key type used in input valued set </p>
+    <input (keyup)="value1= $any($event.target).value" />
+    <p>You entered {{value1}}</p>
+    
+    <input (keyup.enter)="value2=$any($event.target).value">
+    <p>You entered {{value2}}</p>
+    
+    <input (keyup.enter)="value3=$any($event.target).value" (keyup.escape)="$any($event.target).value='';value3=''">
+    <p>You entered {{value3}}</p>
+    
+    
+    <input (keyup.control.shift.enter)="value4=$any($event.target).value">
+    <p>You entered {{value4}}</p>
+    
+   </div>   
+
+
+   <div>
+    <p>change value in ngmodelchage </p>
+      <input type="text" [(ngModel)]="inputchange" (ngModelChange)="inputchangevalue($event)" (ngModelChange)="inputchange = $event">
+      <input [ngModel]="inputchange" (ngModelChange)="inputchange = $event">
+   </div>
+
+   <div>
+    <p>change event</p>
+ 
+Name
+<input type="text" name="name1" (change)="name1Changed($event)">
+ 
+ 
+<br>
+country
+<select name="country1" (change)="country1Changed($event)" >
+  <option [ngValue]="null" disabled>Select Country</option>
+  <option *ngFor="let country of countries" [ngValue]="country.id">{{country.name}}</option>
+</select>
+   </div><p>
+    
+NgModelChange	Change
+NgModelChange is Angular specific event	Change is a DOM Event and has nothing to do with the Angular.
+We must use the ngModelChange along with the ngModel directive	You can use change event on input, select and textarea form elements.
+ngModelChange event passes new value	Change event passes event parameter, Use the target.value to access the new value
+ngModelChange will trigger with each input change	Change event fires when you remove the focus from input text after changing the content.
+   </p>

@@ -1,0 +1,28 @@
+<p>The Angular ngClass Directive is an Angular Attribute Directive, which allows us to add or remove CSS classes to an HTML element. ngClass makes adding a conditional class to an element easier, hence dynamically changing the styles at runtime. We can also add multiple CSS Classes.
+
+</p>
+
+<div [ngClass]="'primary big'">Sample Text</div>
+
+<div ngClass="primary big">Sample Text</div> 
+ 
+
+<p>NgClass with Array</p>
+
+<div [ngClass]="['primary' ,'big']"> sample text value</div>
+
+<p>ngclass object</p>
+<div [ngClass]="{ primary: true, big: true }">Sample Text</div>
+
+
+
+
+<b>Example 5: Value comming from the component method</b> <br />
+  <b>Example 5A (string)</b> <br />
+  <div [ngClass]="cssVar">Sample Text</div>
+ 
+  <b>Example 5B (array)</b> <br />
+  <div [ngClass]="cssArray">Sample Text</div>
+ 
+  <b>Example 5C (Object)</b> <br />
+  <div [ngClass]="cssClass">Sample Text</div>

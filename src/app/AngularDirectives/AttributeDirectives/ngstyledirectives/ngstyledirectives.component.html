@@ -1,0 +1,11 @@
+<p>The Angular ngStyle directive allows us to set the many inline style of a HTML element using an expression. The expression can be evaluated at run time allowing us to dynamically change the style of our HTML element. In this tutorial, we learn how to use the ngStyle with an example.
+
+</p>
+
+<input [(ngModel)]="size" /> 
+<div [ngStyle]="{'font-size.px': size}">Change my size</div>
+
+<div [ngStyle]="mystyles"> hello world</div>
+
+<button (click)="addstylestest()">ngStyle</button>
+<input type="radio" (click)="addstylestest()">
