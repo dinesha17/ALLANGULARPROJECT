@@ -1,0 +1,13 @@
+<div class="childcomp">
+
+  <p>childlifecycle works!</p>
+
+<p>input from parent ={{data}}</p>
+
+<div *ngIf="item">
+    <span>{{item.id}}</span>&nbsp;
+    <span>{{item.name}}</span>
+  </div>
+
+  <ng-content></ng-content>
+</div>

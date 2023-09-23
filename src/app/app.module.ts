@@ -20,6 +20,9 @@ import { PipeComponent } from './Pipes/pipe/pipe.component';
 import { CustomerpipesComponent } from './Pipes/customerpipes/customerpipes.component';
 import { CustomerpipesPipe } from './Pipes/customerpipes/customerpipes.pipe';
 import { ModelandinterfaceComponent } from './modelandinterface/modelandinterface/modelandinterface.component';
+import { LifecyclehooksComponent } from './LIfecyclehook/lifecyclehooks/lifecyclehooks.component';
+import { ChildlifecycleComponent } from './LIfecyclehook/childlifecycle/childlifecycle.component';
+import { AuthoraddressComponent } from './LIfecyclehook/authoraddress/authoraddress.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +43,9 @@ import { ModelandinterfaceComponent } from './modelandinterface/modelandinterfac
     CustomerpipesComponent,
     CustomerpipesPipe,
     ModelandinterfaceComponent,
+    LifecyclehooksComponent,
+    ChildlifecycleComponent,
+    AuthoraddressComponent,
     
     
   ],

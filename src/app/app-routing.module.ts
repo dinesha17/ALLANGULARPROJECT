@@ -14,6 +14,7 @@ import { PipeComponent } from './Pipes/pipe/pipe.component';
 import { PipeslistComponent } from './Pipes/pipeslist/pipeslist.component';
 import { CustomerpipesComponent } from './Pipes/customerpipes/customerpipes.component';
 import { ModelandinterfaceComponent } from './modelandinterface/modelandinterface/modelandinterface.component';
+import { LifecyclehooksComponent } from './LIfecyclehook/lifecyclehooks/lifecyclehooks.component';
 
 const routes: Routes = [
   {
@@ -82,6 +83,10 @@ const routes: Routes = [
   {
     path:'modelandinterface',
     component:ModelandinterfaceComponent
+  },
+  {
+    path:'lifecyclehooks',
+    component:LifecyclehooksComponent
   }
   
 ];

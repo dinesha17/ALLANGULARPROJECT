@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { User } from './user';
+import { UserTest } from './usertest.model';
 
 @Component({
   selector: 'app-modelandinterface',
@@ -7,4 +9,10 @@ import { Component } from '@angular/core';
 })
 export class ModelandinterfaceComponent {
 
+user!:User
+
+constructor(){
+
+  this.user = new UserTest(1,'dinesh','dineshanbu17@gmail')
+}
 }
