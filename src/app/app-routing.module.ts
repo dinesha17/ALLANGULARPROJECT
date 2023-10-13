@@ -15,6 +15,9 @@ import { PipeslistComponent } from './Pipes/pipeslist/pipeslist.component';
 import { CustomerpipesComponent } from './Pipes/customerpipes/customerpipes.component';
 import { ModelandinterfaceComponent } from './modelandinterface/modelandinterface/modelandinterface.component';
 import { LifecyclehooksComponent } from './LIfecyclehook/lifecyclehooks/lifecyclehooks.component';
+import { BlodPressureComponent } from './bloodPressure/blod-pressure/blod-pressure.component';
+import { NgforifComponent } from './logicalcode/ngforif/ngforif.component';
+import { ChartlistComponent } from 'src/chart/chartlist/chartlist.component';
 
 const routes: Routes = [
   {
@@ -87,6 +90,18 @@ const routes: Routes = [
   {
     path:'lifecyclehooks',
     component:LifecyclehooksComponent
+  },
+  {
+    path:'blod-pressure',
+    component:BlodPressureComponent
+  },
+  {
+    path:'ngforif/:id/:name',
+    component:NgforifComponent
+  },
+  {
+    path:'chartlist',
+    component:ChartlistComponent
   }
   
 ];

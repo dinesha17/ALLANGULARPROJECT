@@ -2,11 +2,13 @@
     THE angular lifecycle hooks are the  methods that angular invokes
      on the directives and components as it creates,changes,and destroys them 
 </p>
-<button (click)="counter()">counter</button>
-
+<a routerLink="/">home</a>
+{{count}}
+<button (click)="counter()" #btncounter>counter</button>
+<!-- 
 <app-childlifecycle [data]="1">
     
-</app-childlifecycle>
+</app-childlifecycle> -->
 
 <hr>
 <app-childlifecycle [data]="count" [data1]="test" [item]="obj" >

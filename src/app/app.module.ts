@@ -23,6 +23,8 @@ import { ModelandinterfaceComponent } from './modelandinterface/modelandinterfac
 import { LifecyclehooksComponent } from './LIfecyclehook/lifecyclehooks/lifecyclehooks.component';
 import { ChildlifecycleComponent } from './LIfecyclehook/childlifecycle/childlifecycle.component';
 import { AuthoraddressComponent } from './LIfecyclehook/authoraddress/authoraddress.component';
+import { BlodPressureComponent } from './bloodPressure/blod-pressure/blod-pressure.component';
+import { NgforifComponent } from './logicalcode/ngforif/ngforif.component';
 
 @NgModule({
   declarations: [
@@ -46,6 +48,8 @@ import { AuthoraddressComponent } from './LIfecyclehook/authoraddress/authoraddr
     LifecyclehooksComponent,
     ChildlifecycleComponent,
     AuthoraddressComponent,
+    BlodPressureComponent,
+    NgforifComponent,
     
     
   ],

@@ -1,0 +1,8 @@
+<ul *ngIf="isVisible" >
+    <li *ngFor="let items of  fiends">
+
+        {{items.name}}
+
+    </li>
+</ul>
+<button (click)="hideList()">click</button>
