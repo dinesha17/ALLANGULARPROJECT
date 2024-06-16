@@ -25,6 +25,7 @@ import { ChildlifecycleComponent } from './LIfecyclehook/childlifecycle/childlif
 import { AuthoraddressComponent } from './LIfecyclehook/authoraddress/authoraddress.component';
 import { BlodPressureComponent } from './bloodPressure/blod-pressure/blod-pressure.component';
 import { NgforifComponent } from './logicalcode/ngforif/ngforif.component';
+import { AccentureimportComponent } from './accentureimport/accentureimport.component';
 
 @NgModule({
   declarations: [
@@ -50,6 +51,7 @@ import { NgforifComponent } from './logicalcode/ngforif/ngforif.component';
     AuthoraddressComponent,
     BlodPressureComponent,
     NgforifComponent,
+    AccentureimportComponent,
     
     
   ],
